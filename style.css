@@ -1,60 +1,144 @@
-.body {
-    font-family: "Playfair Display", serif;
-    background: #f4f5f9;
-    color: #111827;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.main-content {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 1200px;
+body {
+  background: #f3f4f6;
+  padding: 40px;
 }
 
-h1 span {
-    color: #3D52DF;
-}
-
-.cards {
+.cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 24px;                             /* espace bin cartes */
+    padding: 24px 40px;
 }
 
 .card {
-    background: #fff;
-    border-radius: 18px;
-    padding: 16px 16px 14px;
+  position: relative;              /* important bach overlay ytzat fo9ha */
+  width: 280px;
+  border-radius: 16px;
+  overflow: hidden;                /* bach ma ykhrj walo barra */
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
-.car-tags {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 12px;
-    border-top: 1px solid #f3f4f6;
-}
-
-.tag {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-}
-
-.tag-icon {
-    width: 18px;
-    height: 18px;
-    color: #9ca3af;
-}
-
-.tag-titre {
-    font-size: 10px;
-    color: #9ca3af;
-    font-weight: 500;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.22);
 }
 
 .card-img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 14px 16px 16px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.card-prix {
+  font-size: 0.9rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-tags {
+  display: flex;          /* ydihom f nafs ligne */
+  flex-wrap: wrap;        /* ila da9a l'espace, yhebto l ligne jaya */
+  gap: 8px;               /* space bin tags */
+  margin-bottom: 12px;    /* space ta7t tags, fo9 bouton */
+}
+
+.tag {
+  display: inline-flex;   /* icon + texte f nafs ligne */
+  align-items: center;    /* vertical center */
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.tag-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;      /* space bin icon w texte */
+}
+
+.tag-titre {
+  line-height: 1;
+}
+
+.louer-btn {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.louer-btn:hover {
+  background: #111827;
+  transform: translateY(-1px);
+}
+
+/* ====== OVERLAY HOVER ====== */
+.card-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(15, 23, 42, 0.45);  /* noir transparant (flou visuel) */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;      /* bach ma y3tarch clicks ila ma kaynach hover */
+  transition: opacity 0.2s ease;
+}
+
+/* class li ghadi nzidouha b JS bach nbayno overlay */
+.card.show-overlay .card-overlay {
+  opacity: 1;
+  pointer-events: auto;      /* f hover n9dro nclickiw 3la bouton */
+}
+
+/* bouton voir plus gowa overlay */
+
+.voirplus-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #f97316;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.6);
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.voirplus-btn:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
 }
