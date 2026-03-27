@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOCATION de VOITURE</title>
+    <title>ClicDrive pour allocation de voiture</title>
     <script src="https://kit.fontawesome.com/7c4a4dec5f.js" crossorigin="anonymous"></script>
     <style>
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:'Poppins',sans-serif;
+            font-family:  "Playfair Display", serif;
         }
         :root {
             --primary: #5d138f;
-            --primary-dark: #5d138f;
-            --secondary: #fff;
-            --dark: #fff;
             --light: #ffffff;
             --gray: #6b7280;
-            --light-gray: #f3f4f6;
             --transition: all 0.3s ease;
         }
         .tous{
-             background: linear-gradient(135deg, rgba(29, 29, 30, 0.8) 100%), 
+             background: 
                         url('image1.jpg') center/cover no-repeat;
         }
 
@@ -65,7 +61,7 @@
         }
         a:hover{
            border-radius: 20px; 
-           background-color: var(--primary-dark);
+           background-color: var(--gray);
            color: white;
            transform: scale(1.05);
            transition: all 0.3s ease;
@@ -92,7 +88,15 @@
             font-weight: 700;
             
         }
-
+        .logo:hover{
+            background-color: #6b7280;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        .logo-footer{
+            background-color: #fff;
+            color: var(--primary);
+        }
 
         .logo i {
             color: var(--primary);
@@ -103,7 +107,7 @@
         /* search Section */
          .search-section {
             padding: 2rem 5%;
-            background: var(--secondary);
+            background: var(--light);
             position: relative;
             z-index: 10;
         }
@@ -113,18 +117,17 @@
             margin: 0 auto;
             display: flex;
             gap: 0;
-            background: var(--dark);
             border-radius: 50px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
         .search-input {
-            flex: 1;
+            flex: 16px;
             padding: 1rem 1.5rem;
             border: none;
             background: transparent;
-            color: var(--light);
+            color: #000;
             font-size: 1rem;
             outline: none;
         }
@@ -147,13 +150,13 @@
         }
 
         .search-btn:hover {
-            background: var(--primary-dark);
+            background: rgb(107, 20, 134);
         }
 
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            justify-content: center;
+            justify-content:center ;
             padding: 8rem 5% 4rem;
             position: relative;
             color:#fff;
@@ -162,32 +165,14 @@
             text-align: center;
             max-width: 800px;
             color:#fff;
+            
         }
-
-        .badge {
-            display: inline-flex;
-            gap: 0.5rem;
-            background: rgba(97, 48, 158, 0.2);
-            color: var(--primary);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            border: 1.5px solid rgba(161, 128, 172, 0.3);
-            color: #fff;
-        }
-
-        .badge i {
-            font-size: 12px;
-        }
-
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
-            background: linear-gradient(135deg, var(--light) 0%, #a0a0a0 100%);
+            background: linear-gradient(135deg,#f0ebeb 100% , var(--gray) 0%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -196,8 +181,8 @@
 
         .hero p {
             font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
+            color: var(--light);
+            margin-bottom: 32px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -207,7 +192,7 @@
 
         .hero-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -215,11 +200,11 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
+            gap: 8px;
+            padding: 16px 32px;
             border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 600px;
             text-decoration: none;
             transition: var(--transition);
             cursor: pointer;
@@ -249,43 +234,152 @@
             transform: translateY(-3px);
             background-color: transparent;
         }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 5rem 5%;
+            
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: var(--light);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(128, 21, 157, 0.05);
+        }
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: var(--gray);
+            font-size: 16px;
+            font-family: "Gentium Book Plus", serif;
+            
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 0 5px var(--primary);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(92, 11, 114, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover .benefit-icon {
+            background: var(--primary);
+            transform: scale(1.1);
+        }
+
+        .benefit-icon i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover .benefit-icon i {
+            color: var(--light);
+        }
+
+
+        
 
         /* Footer */
         .footer {
-            background: var(--secondary);
+            background: var(--primary);
             padding: 4rem 5% 2rem;
             margin: 0;
         }
 
         .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 32px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .footer-brand .logo {
+        .footer-brand {
             margin-bottom: 1rem;
         }
 
         .footer-brand p {
-            color: var(--gray);
+            color: var(--light);
             font-size: 0.95rem;
             line-height: 1.8;
         }
-        .contact-info li {
+        
+        .footer-section h4 {
+            font-weight: bold;
+            margin-bottom: 9px;
+             text-decoration: underline;
+             color: #f0ebeb;
+
+        }
+        .footer-hours p , .footer-contact p{
+            color: var(--light);
+            font-size: 0.95rem;
+            line-height: 1.6;
             display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            color: var(--gray);
-            margin-bottom: 1rem;
+            align-items: center;
+            gap: 0.5rem;
+           
+
+        }
+        .footer-hours p{
+            max-width: 380px;
         }
 
-        .contact-info li i {
-            color: var(--primary);
-            margin-top: 0.3rem;
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
         }
+
 
         .social-links {
             display: flex;
@@ -301,14 +395,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
+            color: var(--light);
             text-decoration: none;
             transition: var(--transition);
         }
 
         .social-links a:hover {
-            background: var(--primary);
-            color: var(--light);
+            background: var(--light);
+            color: var(--primary);
             transform: translateY(-3px);
         }
 
@@ -317,24 +411,133 @@
             padding-top: 2rem;
             margin-top: 2rem;
             border-top: 1px solid rgba(51, 5, 72, 0.1);
-            color: var(--gray);
+            color: var(--light);
             font-size: 0.9rem;
+        }
+        .footer-contact i, .footer-hours i{
+            color: #fff;
+            
+        }
+        /* Welcome Modal Styles */
+        .welcome-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .welcome-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .welcome-content {
+            background: linear-gradient(135deg, #fff 0%, #f8f4ff 100%);
+            max-width: 500px;
+            width: 90%;
+            padding: 2.5rem;
+            border-radius: 30px;
+            text-align: center;
+            transform: scale(0.8);
+            transition: transform 0.4s ease;
+            box-shadow: 0 25px 50px rgba(93, 19, 143, 0.3);
+            border: 2px solid rgba(93, 19, 143, 0.2);
+        }
+        
+        .welcome-modal.show .welcome-content {
+            transform: scale(1);
+        }
+        
+        .welcome-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), #8b3bbf);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: pulse 1s ease infinite;
+        }
+        
+        .welcome-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .welcome-content h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .welcome-content p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .welcome-offer {
+            background: rgba(93, 19, 143, 0.1);
+            padding: 1rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+        }
+        
+        .welcome-offer p {
+            margin-bottom: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .welcome-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+        
+        .welcome-btn:hover {
+            background: rgb(107, 20, 134);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(93, 19, 143, 0.3);
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: var(--secondary);
+            .footer-grid{
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 2rem;
-                transition: var(--transition);
+                text-align: center;
+            }
+            .footer-hours p, .footer-contact p{
+               justify-content: center;
+               text-align: center; 
             }
 
             .nav-links.active {
@@ -396,6 +599,14 @@
             .contact-info li {
                 justify-content: center;
             }
+             .welcome-content {
+                padding: 1.8rem;
+            }
+            
+            .welcome-content h2 {
+                font-size: 1.4rem;
+            }
+        
         }
 
         /* Animations */
@@ -439,15 +650,15 @@
     <header>
         <a href="#" class="logo">
             <i class="fas fa-car"></i>
-            CliqueDrive
+            ClicDrive
         </a>
         
         <nav>
             <ul class="nav-links">
-                <li><a href="accueil"><i class="fa-solid fa-house"></i> Accueil</a></li>
-                <li><a href="catalogue"><i class="fa-solid fa-car"></i> Catalogue</a></li>
-                <li><a href="reservation"><i class="fa-solid fa-calendar"></i> Réservation</a></li>
-                <li><a href="contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+                <li><a href="#accueil"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="catalogue.html"><i class="fa-solid fa-car"></i> Catalogue</a></li>
+                <li><a href="resezrvation.html"><i class="fa-solid fa-calendar"></i> Réservation</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
             </ul>
 
         </nav>
@@ -455,18 +666,14 @@
      <!-- Hero Section -->
     <section class="hero" id="accueil">
         <div class="hero-content">
-            <div class="badge">
-                <i class="fas fa-shield-alt"></i>
-                Location de confiance
-            </div>
             <h1>Trouvez le véhicule qui vous correspond</h1>
             <p>Le choix du véhicule est l'élément le plus important pour que votre voyage se déroule en toute sécurité</p>
             <div class="hero-buttons">
-                <a href="#catalogue" class="btn btn-primary">
+                <a href="catalogue.html" class="btn btn-primary">
                     <i class="fas fa-search"></i>
                     Voir les véhicules
                 </a>
-                <a href="#reservation" class="btn btn-secondary">
+                <a href="resezrvation.html" class="btn btn-secondary">
                     <i class="fas fa-calendar-check"></i>
                     Réserver maintenant
                 </a>
@@ -477,7 +684,7 @@
     <!-- Search Section -->
     <section class="search-section">
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Rechercher un véhicule (ex: SUV, Berline, Sport...)">
+            <input type="text" class="search-input" placeholder="Rechercher un véhicule...?">
             <button class="search-btn">
                 <i class="fas fa-search"></i>
                 Rechercher
@@ -526,7 +733,7 @@
     <footer class="footer" id="contact">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="#" class="logo">
+                <a href="#" class="logo-footer">
                     <i class="fas fa-car"></i>
                     
                 </a>
@@ -541,30 +748,95 @@
 
 
 
-            <div class="footer-section">
+            <div class="footer-section footer-hours">
                 <h4>Horaires d'ouverture</h4>
-                <ul class="contact-info">
-                    <li><i class="fas fa-clock"></i> Lundi - Vendredi : 8h00 - 19h00</li>
-                    <li><i class="fas fa-clock"></i> Samedi : 9h00 - 17h00</li>
-                    <li><i class="fas fa-clock"></i> Dimanche : Fermé</li>
-                </ul>
+                <p>
+                
+                    <i class="fas fa-clock"></i> 
+                        Lundi - Vendredi : 8h00 - 19h00
+                </p>
+                <p>
+                    <i class="fas fa-clock"></i> 
+                    Samedi : 9h00 - 17h00
+                </p>
+                <p>
+                    <i class="fas fa-clock"></i>
+                     Dimanche : Fermé
+                </p>
             </div>
 
-            <div class="footer-section">
+            <div class="footer-section footer-contact">
                 <h4>Contact</h4>
-                <ul class="contact-info">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Avenue des Champs-Élysées, 75008 Paris</li>
-                    <li><i class="fas fa-phone"></i> +212 6 34 80 88 99</li>
-                    <li><i class="fas fa-envelope"></i> contact@carrent.ma</li>
-                </ul>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Agadir Oued Ziz, Maroc
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                     +212 6 34 80 88 99
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                     clicdrive@gmail.ma
+                </p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 CarRent. Tous droits réservés.</p>
+            <p>&copy; 2026 ClicDrive. Tous droits réservés.</p>
         </div>
+        <!-- Welcome Modal -->
+
     </footer>
+    <div class="welcome-modal" id="welcomeModal">
+        <div class="welcome-content">
+            <div class="welcome-icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <h2>Bienvenue chez ClicDrive !</h2>
+            <p>Nous sommes ravis de vous accueillir sur notre plateforme de location de véhicules.</p>
+            <div class="welcome-offer">
+                <p><i class="fas fa-gift"></i> Offre spéciale : <strong>-15%</strong> sur votre première réservation !</p>
+                <p><i class="fas fa-tachometer-alt"></i> Kilométrage illimité offert</p>
+            </div>
+            <button class="welcome-btn" onclick="closeWelcomeModal()">
+                <i class="fas fa-check"></i> Découvrir les offres
+            </button>
+            </div>
+        </div> 
+    
     <script>
+        // Welcome Modal Functions
+        let welcomeModalShown = false;
+        
+        function showWelcomeModal() {
+            const modal = document.getElementById('welcomeModal');
+            if (modal && !welcomeModalShown) {
+                setTimeout(() => {
+                    modal.classList.add('show');
+                    welcomeModalShown = true;
+                }, 1000); // Affiche après 1 seconde
+            }
+        }
+        
+        function closeWelcomeModal() {
+            const modal = document.getElementById('welcomeModal');
+            if (modal) {
+                modal.classList.remove('show');
+            }
+        }
+        
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('welcomeModal');
+            const welcomeContent = document.querySelector('.welcome-content');
+            if (modal && modal.classList.contains('show')) {
+                if (!welcomeContent.contains(event.target)) {
+                    closeWelcomeModal();
+                }
+            }
+        });
+        
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
@@ -600,6 +872,59 @@
                     });
                 }
             });
+        });
+        
+        // Search functionality with welcome message
+        const searchBtn = document.querySelector('.search-btn');
+        const searchInput = document.querySelector('.search-input');
+        
+        if (searchBtn && searchInput) {
+            searchBtn.addEventListener('click', function() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    alert('🔍 Recherche de véhicules : "' + searchTerm + '"\n\nNous vous invitons à consulter notre catalogue pour découvrir tous les véhicules disponibles !');
+                } else {
+                    alert('🔍 Veuillez entrer un type de véhicule (SUV, Berline, Sport, etc.) pour commencer votre recherche.');
+                }
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchBtn.click();
+                }
+            });
+        }
+        
+        // Show welcome modal when page loads
+        window.addEventListener('load', function() {
+            showWelcomeModal();
+            
+            // Afficher un message de bienvenue dans la console
+            console.log('%c🚗 Bienvenue sur ClicDrive !', 'color: #5d138f; font-size: 16px; font-weight: bold;');
+            console.log('%c📍 Votre partenaire de confiance pour la location de véhicules au Maroc', 'color: #6b7280; font-size: 12px;');
+            console.log('%c✨ Profitez de -15% sur votre première réservation !', 'color: #5d138f; font-size: 12px;');
+        });
+        
+        // Animation on scroll for benefits cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.benefit-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
