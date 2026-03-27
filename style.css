@@ -427,17 +427,18 @@ a:hover, .catalog {
 }
 
 .catalog-voirplus-btn {
-  text-align: center;
-  width: 50%;
-  margin-top: 20px;
   padding: 18px;
-  border-radius: 200px;
-  border: none;
   background: var(--dark);
+  border: none;
   color: #ffffff;
+  border-radius: 200px;
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  width: 50%;
+  margin-top: 20px;
   box-shadow: 0 8px 20px rgba(38, 2, 83, 0.763);
-  transition: background 0.2s ease, transform 0.1s ease;
 }
