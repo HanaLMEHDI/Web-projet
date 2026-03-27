@@ -5,12 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>catalogue</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c4a4dec5f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <!--HEADER-->
     <header>
-        <nav>...</nav>
+        <a href="#" class="logo">
+            <i class="fas fa-car"></i>
+            CliqueDrive
+        </a>
+        
+        <!--Navbar-->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Accueil.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="catalogue.html"><i class="fa-solid fa-car"></i> Catalogue</a></li>
+                <li><a href="resezrvation.html"><i class="fa-solid fa-calendar"></i> Réservation</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+            </ul>
+
+        </nav>
     </header>
 
+    <!-- HAUT SECTION -->
+    <section class="haut">
+        <div class="haut-content">
+            <p class="haut-header">ClicDrive - Catalogue</p>
+            <h1>Découvrez notre sélection de véhicules</h1>
+            <p>Trouvez la voiture idéale pour vos trajets quotidiens, voyages en famille ou escapades de luxe.</p>
+            <p>Choisissez la catégorie, le prix et la transmission qui vous conviennent.</p>
+        </div>
+    </section>
+
+
+    <!-- FILTRES -->
+    <section class="filtres-section">
+        <div class="filtres-content">
+
+            <!-- Category Btns -->
+            <div class="filtre-item">
+                <label class="filtre-label">Catégorie</label>
+                <div class="category-btns" id="categoryBtns">
+                    <button class="categ-btn actif" id-category="all">All</button>
+                    <button class="categ-btn" id-category="Populaire">Populaire</button>
+                    <button class="categ-btn" id-category="Familiale">Familiale</button>
+                    <button class="categ-btn" id-category="SUV">SUV</button>
+                    <button class="categ-btn" id-category="Luxe">Luxe</button>
+                </div>
+            </div>
+            
+            <!-- Prix Rang -->
+            <div class="filtre-item">
+                <label class="filtre-label">Prix/jour (DH)</label>
+                <div class="prix-rang">
+                    <input type="number" id="minPrix" placeholder="Min" min="0" value="">
+                    <span>-</span>
+                    <input type="number" id="maxPrix" placeholder="Max" min="0" value="">
+                </div>
+            </div>
+            
+            <!-- Transmission Option --> 
+            <div class="filtre-item">
+                <label class="filtre-label">Transmission:</label>
+                <div class="transm-option">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="manuel" value="Manuel">
+                        <span>Manuel</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="auto" value="Auto">
+                        <span>Automatic</span>
+                    </label>
+                </div>
+            </div>
+                
+            <button class="reset-btn" type="reset">
+                <i class="fas fa-undo"></i>Supprimer filtrage
+            </button>
+        </div>
+    </section>
+
+    <!--GRID CARDS-->
     <div class="cards" >
         <!-- Card 1 -->
         <div class="card">
@@ -631,9 +707,15 @@
                 <button class="voirplus-btn">Voir plus</button>
             </div>
         </div>
-
   
-    </div>
+    </div> 
+
+    <!-- CATALOGUE VOIR PLUS -->
+        <div class="voirplus-content" id="VoirplusContent">
+            <button class="catalog-voirplus-btn" id="VoirplusBtn">
+                <i class="fas fa-chevron-down"></i> Voir plus
+            </button>
+        </div>
      <script src="script.js"></script>
 </body>
 </html>
